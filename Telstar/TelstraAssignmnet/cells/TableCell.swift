@@ -74,7 +74,6 @@ class TableCell: UITableViewCell {
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-125-[v0]-10-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0":lblDescription]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-25-[v0(>=90)]-10-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v0":lblDescription]))
-        
     }
     
     required init?(coder: NSCoder) {

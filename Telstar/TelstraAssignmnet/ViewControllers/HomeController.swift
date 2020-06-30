@@ -13,6 +13,7 @@ class HomeController: UITableViewController {
     // Class Varibles
     var viewModel = ViewModel()
     internal let refreshCtrl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -39,14 +40,12 @@ class HomeController: UITableViewController {
     }
     
     @objc private func refreshData(_ sender: Any) {
-        // Fetch Weather Data
+        // Fetch  Data
         self.viewModel.fetchData()
     }
-    
     // Closure initialize
     func closureSetUp()  {
         viewModel.reloadList = { [weak self] ()  in
-            ///UI chnages in main tread
             DispatchQueue.main.async {
                 if let title = self?.viewModel.modelData?.title{
                     self?.title = title

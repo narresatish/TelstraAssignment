@@ -13,8 +13,6 @@ extension UIViewController{
     var activityIndicatorTag: Int { return 999999 }
     
     func startActivityIndicator() {
-        //Set the position - defaults to `center` if no`location`
-        //argument is provided
         let frame  = CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 50, height: 50)
         //Ensure the UI is updated from the main thread
         //in case this method is called from a closure
