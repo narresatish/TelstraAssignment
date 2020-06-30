@@ -1,0 +1,6 @@
+framework module Pods_Telstar {
+  umbrella header "Pods-Telstar-umbrella.h"
+
+  export *
+  module * { export * }
+}
