@@ -16,7 +16,6 @@ class HomeController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         tableView.rowHeight = 110;
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.refreshControl = refreshCtrl
