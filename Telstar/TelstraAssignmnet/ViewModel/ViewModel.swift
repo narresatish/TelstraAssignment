@@ -15,11 +15,7 @@ class ViewModel {
     var reloadList = {() -> () in }
     var errorMessage = {(message : String) -> () in }
 
-    
-   // var modelData:ModelData?
-    
-    
-    ///Array of List Model class
+        ///Array of List Model class
     var modelData:ModelData? {
            ///Reload data when data set
           didSet{

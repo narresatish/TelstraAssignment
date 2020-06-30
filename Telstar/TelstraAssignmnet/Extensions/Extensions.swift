@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController{
     var activityIndicatorTag: Int { return 999999 }
-   
+    
     func startActivityIndicator() {
         //Set the position - defaults to `center` if no`location`
         //argument is provided
@@ -19,24 +19,24 @@ extension UIViewController{
         //Ensure the UI is updated from the main thread
         //in case this method is called from a closure
         var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
-            DispatchQueue.main.async {
-                //Create the activity indicator
-                if #available(iOS 13.0, *) {
-                   activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
-                } else {
-                    // Fallback on earlier versions
-                    activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
-                }
-                //Add the tag so we can find the view in order to remove it later
-                activityIndicator.tag = self.activityIndicatorTag
-                //Set the location
-                activityIndicator.frame = frame
-               // activityIndicator.center = loc
-                activityIndicator.hidesWhenStopped = true
-                //Start animating and add the view
-                activityIndicator.startAnimating()
-                self.view.addSubview(activityIndicator)
+        DispatchQueue.main.async {
+            //Create the activity indicator
+            if #available(iOS 13.0, *) {
+                activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+            } else {
+                // Fallback on earlier versions
+                activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
             }
+            //Add the tag so we can find the view in order to remove it later
+            activityIndicator.tag = self.activityIndicatorTag
+            //Set the location
+            activityIndicator.frame = frame
+            // activityIndicator.center = loc
+            activityIndicator.hidesWhenStopped = true
+            //Start animating and add the view
+            activityIndicator.startAnimating()
+            self.view.addSubview(activityIndicator)
+        }
     }
     
     func stopActivityIndicator() {
@@ -51,6 +51,7 @@ extension UIViewController{
             }
         }
     }
+    
     
     func showAlertWithMessage(message:String){
         let alert =  UIAlertController(title: "Telstra", message: message, preferredStyle: .alert)
