@@ -8,5 +8,5 @@
 
 import Foundation
 
-let serverURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+let baseURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
  

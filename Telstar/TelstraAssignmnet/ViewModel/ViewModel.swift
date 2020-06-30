@@ -30,7 +30,7 @@ class ViewModel {
     
      // Get data from API
     func fetchData() {
-           let urlString: String = serverURL
+           let urlString: String = baseURL
         var request = URLRequest(url: URL(string: urlString)!)
            request.httpMethod = "GET"
            //create the session object
